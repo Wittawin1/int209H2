@@ -1,13 +1,13 @@
 name: CI with Docker Compose
  
 on:
-push:
+  push:
    branches:
      - main
-pull_request:
- 
+  pull_request:
+
 jobs:
-docker-ci:
+  docker-ci:
    runs-on: ubuntu-latest
  
    steps:
@@ -25,5 +25,5 @@ docker-ci:
  
      - name: Shutdown Docker Compose
        if: always()
-       run: docker compose down1~name: CI with Docker Compose
+       run: docker compose down
  
